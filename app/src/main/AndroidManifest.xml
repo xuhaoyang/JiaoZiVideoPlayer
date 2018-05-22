@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.jzvd.demo">
+    package="com.jzvd.demo">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".ApplicationDemo"
+        android:name="com.jzvd.demo.ApplicationDemo"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ActivityMain"
+            android:name="com.jzvd.demo.ActivityMain"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -23,79 +23,79 @@
         </activity>
 
         <activity
-            android:name=".ActivityDirectPlay"
+            android:name="com.jzvd.demo.ActivityDirectPlay"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityListView"
+            android:name="com.jzvd.demo.ActivityListView"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityListViewNormal"
+            android:name="com.jzvd.demo.ActivityListViewNormal"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityTinyWindowListViewNormal"
+            android:name="com.jzvd.demo.ActivityTinyWindowListViewNormal"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityListViewFragmentViewPager"
+            android:name="com.jzvd.demo.ActivityListViewFragmentViewPager"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityListViewMultiHolder"
+            android:name="com.jzvd.demo.ActivityListViewMultiHolder"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityTinyWindowRecycleView"
+            android:name="com.jzvd.demo.ActivityTinyWindowRecycleView"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityTinyWindow"
+            android:name="com.jzvd.demo.ActivityTinyWindow"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityTinyWindowListViewMultiHolder"
+            android:name="com.jzvd.demo.ActivityTinyWindowListViewMultiHolder"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityTinyWindowRecycleViewMultiHolder"
+            android:name="com.jzvd.demo.ActivityTinyWindowRecycleViewMultiHolder"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityApi"
+            android:name="com.jzvd.demo.ActivityApi"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityApiUISmallChange"
+            android:name="com.jzvd.demo.ActivityApiUISmallChange"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityApiUIBigChange"
+            android:name="com.jzvd.demo.ActivityApiUIBigChange"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityApiRotationVideoSize"
+            android:name="com.jzvd.demo.ActivityApiRotationVideoSize"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityApiCustomMediaPlayer"
+            android:name="com.jzvd.demo.ActivityApiCustomMediaPlayer"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityListViewRecyclerView"
+            android:name="com.jzvd.demo.ActivityListViewRecyclerView"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityWebView"
+            android:name="com.jzvd.demo.ActivityWebView"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityApiOrientation"
+            android:name="com.jzvd.demo.ActivityApiOrientation"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityApiExtendsNormal"
+            android:name="com.jzvd.demo.ActivityApiExtendsNormal"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
     </application>
