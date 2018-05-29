@@ -1,4 +1,4 @@
-package com.echatsoft.jzvd;
+package com.echat.jzvd;
 
 /**
  * Created by Nathen

@@ -1,4 +1,4 @@
-package com.echatsoft.jzvd;
+package com.echat.jzvd;
 
 import android.media.AudioManager;
 import android.media.MediaPlayer;

@@ -1,4 +1,4 @@
-package com.echatsoft.jzvd;
+package com.echat.jzvd;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -26,6 +26,8 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.echat.jzvd.R;
 
 import java.lang.reflect.Constructor;
 import java.util.LinkedHashMap;
