@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -8,7 +9,7 @@ android {
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode 80
-        versionName "6.2.10"
+        versionName "1.0.0-beta1"
     }
     buildTypes {
         release {
@@ -25,6 +26,15 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
     compileOnly "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
+}
+
+publish {
+    userOrg = 'echat' // 改成你在 bintray 上注册的用户名
+    groupId = 'com.echatsoft.echatsdk' // 改成你的包名（影响别人引用的第一段）
+    artifactId = 'videoplayer' // 改成你的 Library 名字（影响别人引用的第二段）
+    publishVersion = android.defaultConfig.versionName // 版本号 （影响别人引用的第三段）
+    desc = 'im videoplayer'
+    website = 'https://git.xhy.hk/xhy/'
 }
 
 //apply from: '../gradle/maven_push.gradle'

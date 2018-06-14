@@ -128,6 +128,7 @@ public abstract class JZVideoPlayer extends FrameLayout implements View.OnClickL
     protected float mGestureDownBrightness;
     protected long mSeekTimePosition;
     boolean tmp_test_back = false;
+    private boolean isActionBarExist = true;
 
     public JZVideoPlayer(Context context) {
         super(context);
@@ -234,6 +235,7 @@ public abstract class JZVideoPlayer extends FrameLayout implements View.OnClickL
 
     @SuppressLint("RestrictedApi")
     public static void hideSupportActionBar(Context context) {
+        checkSupportActionBarExits(context);
         if (ACTION_BAR_EXIST && JZUtils.getAppCompActivity(context) != null) {
             ActionBar ab = JZUtils.getAppCompActivity(context).getSupportActionBar();
             if (ab != null) {
@@ -245,6 +247,21 @@ public abstract class JZVideoPlayer extends FrameLayout implements View.OnClickL
             JZUtils.getWindow(context).setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
+    }
+
+    public static void checkSupportActionBarExits(Context context) {
+        boolean isExist;
+        if (JZUtils.getAppCompActivity(context) != null) {
+            ActionBar ab = JZUtils.getAppCompActivity(context).getSupportActionBar();
+            if (ab == null) {
+                isExist = false;
+            } else {
+                isExist = ab.isShowing();//false隐藏
+            }
+            ACTION_BAR_EXIST = isExist;
+            // 这个 用这个命名可能不恰当 TOOL_BAR_EXIST
+        }
+
     }
 
     public static void clearSavedProgress(Context context, String url) {
