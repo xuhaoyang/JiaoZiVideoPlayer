@@ -82,8 +82,9 @@ public abstract class JZVideoPlayer extends FrameLayout implements View.OnClickL
                     break;
                 case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
                     try {
-                        if (JZVideoPlayerManager.getCurrentJzvd().currentState == JZVideoPlayer.CURRENT_STATE_PLAYING) {
-                            JZVideoPlayerManager.getCurrentJzvd().startButton.performClick();
+                        JZVideoPlayer player = JZVideoPlayerManager.getCurrentJzvd();
+                        if (player != null && player.currentState == JZVideoPlayer.CURRENT_STATE_PLAYING) {
+                            player.startButton.performClick();
                         }
                     } catch (IllegalStateException e) {
                         e.printStackTrace();
@@ -466,7 +467,7 @@ public abstract class JZVideoPlayer extends FrameLayout implements View.OnClickL
                     return;
                 }
                 startVideo();
-                onEvent(JZUserAction.ON_CLICK_START_ICON);
+                onEvent(JZUserAction.ON_CLICK_START_ICON);//开始的事件应该在播放之后，此处特殊
             } else if (currentState == CURRENT_STATE_PLAYING) {
                 onEvent(JZUserAction.ON_CLICK_PAUSE);
                 Log.d(TAG, "pauseVideo [" + this.hashCode() + "] ");
