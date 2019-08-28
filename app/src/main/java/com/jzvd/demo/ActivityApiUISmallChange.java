@@ -7,8 +7,8 @@ import android.view.MenuItem;
 
 import com.bumptech.glide.Glide;
 
-import com.echatsoft.jzvd.JZVideoPlayer;
-import com.echatsoft.jzvd.JZVideoPlayerStandard;
+import com.echat.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayerStandard;
 import com.jzvd.demo.CustomView.JZVideoPlayerStandardAutoCompleteAfterFullscreen;
 import com.jzvd.demo.CustomView.JZVideoPlayerStandardShowShareButtonAfterFullscreen;
 import com.jzvd.demo.CustomView.JZVideoPlayerStandardShowTextureViewAfterAutoComplete;

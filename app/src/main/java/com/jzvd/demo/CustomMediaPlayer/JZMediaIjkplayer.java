@@ -6,9 +6,9 @@ import android.view.Surface;
 
 import java.io.IOException;
 
-import com.echatsoft.jzvd.JZMediaInterface;
-import com.echatsoft.jzvd.JZMediaManager;
-import com.echatsoft.jzvd.JZVideoPlayerManager;
+import com.echat.jzvd.JZMediaInterface;
+import com.echat.jzvd.JZMediaManager;
+import com.echat.jzvd.JZVideoPlayerManager;
 import tv.danmaku.ijk.media.player.IMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkTimedText;

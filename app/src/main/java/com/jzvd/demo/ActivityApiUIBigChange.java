@@ -5,7 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.echatsoft.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayer;
 
 /**
  * Created by Nathen on 16/7/31.

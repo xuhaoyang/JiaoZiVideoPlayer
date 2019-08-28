@@ -13,8 +13,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import com.echatsoft.jzvd.JZVideoPlayer;
-import com.echatsoft.jzvd.JZVideoPlayerStandard;
+import com.echat.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayerStandard;
 
 /**
  * Created by Nathen on 2017/11/1.

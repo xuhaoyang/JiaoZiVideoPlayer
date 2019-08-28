@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.echatsoft.jzvd.JZVideoPlayer;
-import com.echatsoft.jzvd.JZVideoPlayerStandard;
+import com.echat.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayerStandard;
 
 /**
  * Created by Nathen on 16/7/31.

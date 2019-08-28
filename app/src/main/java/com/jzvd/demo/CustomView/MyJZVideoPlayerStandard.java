@@ -5,7 +5,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.echatsoft.jzvd.JZVideoPlayerStandard;
+import com.echat.jzvd.JZVideoPlayerStandard;
+import com.jzvd.demo.R;
 
 /**
  * 这里可以监听到视频播放的生命周期和播放状态
@@ -30,7 +31,7 @@ public class MyJZVideoPlayerStandard extends JZVideoPlayerStandard {
     public void onClick(View v) {
         super.onClick(v);
         int i = v.getId();
-        if (i == com.jzvd.R.id.fullscreen) {
+        if (i == R.id.fullscreen) {
             if (currentScreen == SCREEN_WINDOW_FULLSCREEN) {
                 //click quit fullscreen
             } else {
@@ -41,7 +42,7 @@ public class MyJZVideoPlayerStandard extends JZVideoPlayerStandard {
 
     @Override
     public int getLayoutId() {
-        return com.jzvd.R.layout.jz_layout_standard;
+        return R.layout.jz_layout_standard;
     }
 
     @Override

@@ -14,9 +14,9 @@ import com.bumptech.glide.Glide;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 
-import com.echatsoft.jzvd.JZMediaSystem;
-import com.echatsoft.jzvd.JZVideoPlayer;
-import com.echatsoft.jzvd.JZVideoPlayerStandard;
+import com.echat.jzvd.JZMediaSystem;
+import com.echat.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayerStandard;
 import com.jzvd.demo.CustomMediaPlayer.CustomMediaPlayerAssertFolder;
 import com.jzvd.demo.CustomMediaPlayer.JZExoPlayer;
 import com.jzvd.demo.CustomMediaPlayer.JZMediaIjkplayer;

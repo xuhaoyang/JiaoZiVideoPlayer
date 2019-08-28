@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.echatsoft.jzvd.JZVideoPlayerStandard;
+import com.echat.jzvd.JZVideoPlayerStandard;
 
 /**
  * Created by Nathen on 2016/11/6.

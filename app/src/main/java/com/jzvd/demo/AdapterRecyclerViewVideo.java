@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
 
-import com.echatsoft.jzvd.JZVideoPlayer;
-import com.echatsoft.jzvd.JZVideoPlayerStandard;
+import com.echat.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayerStandard;
 
 public class AdapterRecyclerViewVideo extends RecyclerView.Adapter<AdapterRecyclerViewVideo.MyViewHolder> {
 

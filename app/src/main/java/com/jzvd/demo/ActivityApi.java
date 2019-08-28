@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.echat.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayerStandard;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -21,8 +23,6 @@ import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
-import com.echatsoft.jzvd.JZVideoPlayer;
-import com.echatsoft.jzvd.JZVideoPlayerStandard;
 
 /**
  * Created by Nathen on 16/7/31.

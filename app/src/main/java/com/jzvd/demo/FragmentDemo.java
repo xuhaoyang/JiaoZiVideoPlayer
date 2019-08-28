@@ -9,7 +9,8 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.ListView;
 
-import com.echatsoft.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayer;
+
 
 /**
  * Created by Nathen on 2017/6/9.

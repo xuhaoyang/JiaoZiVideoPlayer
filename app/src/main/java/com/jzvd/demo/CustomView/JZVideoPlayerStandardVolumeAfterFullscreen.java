@@ -3,8 +3,8 @@ package com.jzvd.demo.CustomView;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.echatsoft.jzvd.JZMediaManager;
-import com.echatsoft.jzvd.JZVideoPlayerStandard;
+import com.echat.jzvd.JZMediaManager;
+import com.echat.jzvd.JZVideoPlayerStandard;
 
 /**
  * Created by pc on 2018/1/17.

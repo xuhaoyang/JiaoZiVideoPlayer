@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.AbsListView;
 import android.widget.ListView;
 
-import com.echatsoft.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayer;
 
 /**
  * Created by Nathen on 16/7/31.

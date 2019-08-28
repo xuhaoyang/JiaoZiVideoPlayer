@@ -26,7 +26,7 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-tasks.getByPath(":app:compileDebugJavaWithJavac").enabled = false
-tasks.getByPath(":app:compileReleaseJavaWithJavac").enabled = false
+//tasks.getByPath(":app:compileDebugJavaWithJavac").enabled = false
+//tasks.getByPath(":app:compileReleaseJavaWithJavac").enabled = false
 //tasks.getByPath(":app:releaseAndroidJavadocs").enabled = false
 //tasks.getByPath(":app:verifyReleaseResources").enabled = false

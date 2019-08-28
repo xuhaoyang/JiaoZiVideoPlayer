@@ -8,10 +8,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.echatsoft.jzvd.JZMediaManager;
-import com.echatsoft.jzvd.JZUtils;
-import com.echatsoft.jzvd.JZVideoPlayer;
-import com.echatsoft.jzvd.JZVideoPlayerManager;
+import com.echat.jzvd.JZMediaManager;
+import com.echat.jzvd.JZUtils;
+import com.echat.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayerManager;
 
 /**
  * Created by yujunkui on 16/8/29.

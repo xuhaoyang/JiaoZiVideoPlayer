@@ -5,9 +5,9 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.view.Surface;
 
-import com.echatsoft.jzvd.JZMediaInterface;
-import com.echatsoft.jzvd.JZMediaManager;
-import com.echatsoft.jzvd.JZVideoPlayerManager;
+import com.echat.jzvd.JZMediaInterface;
+import com.echat.jzvd.JZMediaManager;
+import com.echat.jzvd.JZVideoPlayerManager;
 
 /**
  * Created by Nathen on 2017/11/23.

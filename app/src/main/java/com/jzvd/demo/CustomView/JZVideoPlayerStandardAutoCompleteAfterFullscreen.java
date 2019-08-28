@@ -6,9 +6,9 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.WindowManager;
 
-import com.echatsoft.jzvd.JZMediaManager;
-import com.echatsoft.jzvd.JZUtils;
-import com.echatsoft.jzvd.JZVideoPlayerStandard;
+import com.echat.jzvd.JZMediaManager;
+import com.echat.jzvd.JZUtils;
+import com.echat.jzvd.JZVideoPlayerStandard;
 
 /**
  * 全屏状态播放完成，不退出全屏

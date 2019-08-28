@@ -11,9 +11,9 @@ import android.widget.AbsoluteLayout;
 
 import com.bumptech.glide.Glide;
 
-import com.echatsoft.jzvd.JZUtils;
-import com.echatsoft.jzvd.JZVideoPlayer;
-import com.echatsoft.jzvd.JZVideoPlayerStandard;
+import com.echat.jzvd.JZUtils;
+import com.echat.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayerStandard;
 
 /**
  * Created by Nathen on 16/10/13.

@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.echatsoft.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayer;
 
 /**
  * Created by Nathen on 2017/11/1.

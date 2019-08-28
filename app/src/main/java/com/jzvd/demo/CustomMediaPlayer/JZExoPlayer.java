@@ -34,9 +34,9 @@ import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.video.VideoListener;
 
-import com.echatsoft.jzvd.JZMediaInterface;
-import com.echatsoft.jzvd.JZMediaManager;
-import com.echatsoft.jzvd.JZVideoPlayerManager;
+import com.echat.jzvd.JZMediaInterface;
+import com.echat.jzvd.JZMediaManager;
+import com.echat.jzvd.JZVideoPlayerManager;
 import com.jzvd.demo.R;
 
 /**

@@ -10,10 +10,10 @@ import android.widget.Button;
 
 import com.bumptech.glide.Glide;
 
-import com.echatsoft.jzvd.JZUserAction;
-import com.echatsoft.jzvd.JZUserActionStandard;
-import com.echatsoft.jzvd.JZVideoPlayer;
-import com.echatsoft.jzvd.JZVideoPlayerStandard;
+import com.echat.jzvd.JZUserAction;
+import com.echat.jzvd.JZUserActionStandard;
+import com.echat.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayerStandard;
 import com.jzvd.demo.CustomView.MyJZVideoPlayerStandard;
 
 /**

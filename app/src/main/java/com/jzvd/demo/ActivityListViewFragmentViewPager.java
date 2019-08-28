@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.echatsoft.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayer;
 
 /**
  * Created by Nathen

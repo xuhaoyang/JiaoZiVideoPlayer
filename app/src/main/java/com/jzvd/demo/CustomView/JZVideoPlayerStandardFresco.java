@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.echatsoft.jzvd.JZVideoPlayerStandard;
+import com.echat.jzvd.JZVideoPlayerStandard;
 import com.jzvd.demo.R;
 
 //import com.facebook.drawee.view.SimpleDraweeView;
