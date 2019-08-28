@@ -55,6 +55,7 @@ public class MyJZVideoPlayerStandard extends JZVideoPlayerStandard {
         super.startVideo();
     }
 
+    //onState 代表了播放器引擎的回调，播放视频各个过程的状态的回调
     @Override
     public void onStateNormal() {
         super.onStateNormal();
@@ -83,6 +84,47 @@ public class MyJZVideoPlayerStandard extends JZVideoPlayerStandard {
     @Override
     public void onStateAutoComplete() {
         super.onStateAutoComplete();
+    }
+
+    //changeUiTo 真能能修改ui的方法
+    @Override
+    public void changeUiToNormal() {
+        super.changeUiToNormal();
+    }
+
+    @Override
+    public void changeUiToPreparing() {
+        super.changeUiToPreparing();
+    }
+
+    @Override
+    public void changeUiToPlayingShow() {
+        super.changeUiToPlayingShow();
+    }
+
+    @Override
+    public void changeUiToPlayingClear() {
+        super.changeUiToPlayingClear();
+    }
+
+    @Override
+    public void changeUiToPauseShow() {
+        super.changeUiToPauseShow();
+    }
+
+    @Override
+    public void changeUiToPauseClear() {
+        super.changeUiToPauseClear();
+    }
+
+    @Override
+    public void changeUiToComplete() {
+        super.changeUiToComplete();
+    }
+
+    @Override
+    public void changeUiToError() {
+        super.changeUiToError();
     }
 
     @Override

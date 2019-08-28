@@ -4,8 +4,8 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.echat.jzvd.JZDataSource;
 import com.echat.jzvd.JZVideoPlayerStandard;
-
 /**
  * Created by Nathen
  * On 2016/04/27 10:49
@@ -20,8 +20,8 @@ public class JZVideoPlayerStandardShowTitleAfterFullscreen extends JZVideoPlayer
     }
 
     @Override
-    public void setUp(String url, int screen, Object... objects) {
-        super.setUp(url, screen, objects);
+    public void setUp(JZDataSource jzDataSource, int screen) {
+        super.setUp(jzDataSource, screen);
         if (currentScreen == SCREEN_WINDOW_FULLSCREEN) {
             titleTextView.setVisibility(View.VISIBLE);
         } else {
