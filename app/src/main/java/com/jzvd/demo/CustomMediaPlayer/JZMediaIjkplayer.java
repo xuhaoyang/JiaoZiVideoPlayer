@@ -1,14 +1,20 @@
 package com.jzvd.demo.CustomMediaPlayer;
 
+import android.app.Application;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.view.Surface;
 
+import java.io.FileDescriptor;
 import java.io.IOException;
 
 import com.echat.jzvd.JZMediaInterface;
 import com.echat.jzvd.JZMediaManager;
 import com.echat.jzvd.JZVideoPlayerManager;
+import com.jzvd.demo.ApplicationDemo;
+import com.jzvd.demo.Utils;
+
 import tv.danmaku.ijk.media.player.IMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkTimedText;
@@ -47,7 +53,13 @@ public class JZMediaIjkplayer extends JZMediaInterface implements IMediaPlayer.O
         ijkMediaPlayer.setOnTimedTextListener(JZMediaIjkplayer.this);
 
         try {
-            ijkMediaPlayer.setDataSource(jzDataSource.getCurrentUrl().toString());
+            if (jzDataSource.getCurrentUrl() instanceof FileDescriptor) {
+                ijkMediaPlayer.setDataSource((FileDescriptor) jzDataSource.getCurrentUrl());
+            } else if (Utils.isContent(jzDataSource.getCurrentUrl().toString())) {
+                ijkMediaPlayer.setDataSource(ApplicationDemo.app, Uri.parse(jzDataSource.getCurrentUrl().toString()));
+            } else {
+                ijkMediaPlayer.setDataSource(jzDataSource.getCurrentUrl().toString());
+            }
             ijkMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
             ijkMediaPlayer.setScreenOnWhilePlaying(true);
             ijkMediaPlayer.prepareAsync();

@@ -36,7 +36,7 @@ public class JZMediaManager implements TextureView.SurfaceTextureListener {
         mMediaHandlerThread = new HandlerThread(TAG);
         mMediaHandlerThread.start();
         mMediaHandler = new MediaHandler(mMediaHandlerThread.getLooper());
-        mainThreadHandler = new Handler();
+        mainThreadHandler = new Handler(Looper.getMainLooper());
         if (jzMediaInterface == null)
             jzMediaInterface = new JZMediaSystem();
     }

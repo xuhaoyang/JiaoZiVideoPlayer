@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.bumptech.glide.Glide;
 import com.echat.jzvd.JZDataSource;
 import com.echat.jzvd.JZVideoPlayer;
@@ -61,7 +62,7 @@ public class ActivityApi extends AppCompatActivity implements View.OnClickListen
         LinkedHashMap map = new LinkedHashMap();
 
         String proxyUrl = ApplicationDemo.getProxy(this).getProxyUrl(VideoConstant.videoUrls[0][9]);
-
+        LogUtils.i("proxyUrl: " + proxyUrl);
         map.put("高清", proxyUrl);
         map.put("标清", VideoConstant.videoUrls[0][6]);
         map.put("普清", VideoConstant.videoUrlList[0]);
