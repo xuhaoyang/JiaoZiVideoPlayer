@@ -1,5 +1,6 @@
 package com.jzvd.demo;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.AttributeSet;
@@ -15,6 +16,8 @@ import com.echat.jzvd.JZMediaManager;
 import com.echat.jzvd.JZUserAction;
 import com.echat.jzvd.JZVideoPlayerStandard;
 
+import java.lang.ref.WeakReference;
+
 public class CustomVideoPlayerStandard extends JZVideoPlayerStandard {
     private static final String TAG = "CustomVideoPlayerStandard";
 
@@ -24,6 +27,29 @@ public class CustomVideoPlayerStandard extends JZVideoPlayerStandard {
 
     public CustomVideoPlayerStandard(Context context, AttributeSet attrs) {
         super(context, attrs);
+    }
+
+    private WeakReference<Activity> mActivity;
+
+    @Override
+    public void init(Context context) {
+        super.init(context);
+        mActivity = new WeakReference<Activity>((Activity) context);
+    }
+
+    private Activity getActivity() {
+        return mActivity.get();
+    }
+
+    @Override
+    public void onClick(View v) {
+        super.onClick(v);
+        int i = v.getId();
+        if (i == R.id.back) {
+            if (getActivity() != null && getActivity() instanceof EChatCustomActivity) {
+                getActivity().finish();
+            }
+        }
     }
 
     float xDown, yDown;

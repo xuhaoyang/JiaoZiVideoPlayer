@@ -1,18 +1,26 @@
-package com.echat.jzvd;
+package com.jzvd.demo.CustomMediaPlayer;
 
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.view.Surface;
+
+import com.echat.jzvd.JZMediaInterface;
+import com.echat.jzvd.JZMediaManager;
+import com.echat.jzvd.JZVideoPlayer;
+import com.echat.jzvd.JZVideoPlayerManager;
 
 import java.io.FileDescriptor;
 import java.lang.reflect.Method;
 import java.util.Map;
 
+import static com.jzvd.demo.ApplicationDemo.app;
+
 /**
  * Created by Nathen on 2017/11/8.
  * 实现系统的播放引擎
  */
-public class JZMediaSystem extends JZMediaInterface implements MediaPlayer.OnPreparedListener, MediaPlayer.OnCompletionListener, MediaPlayer.OnBufferingUpdateListener, MediaPlayer.OnSeekCompleteListener, MediaPlayer.OnErrorListener, MediaPlayer.OnInfoListener, MediaPlayer.OnVideoSizeChangedListener {
+public class JZCustomMediaSystem extends JZMediaInterface implements MediaPlayer.OnPreparedListener, MediaPlayer.OnCompletionListener, MediaPlayer.OnBufferingUpdateListener, MediaPlayer.OnSeekCompleteListener, MediaPlayer.OnErrorListener, MediaPlayer.OnInfoListener, MediaPlayer.OnVideoSizeChangedListener {
 
     public MediaPlayer mediaPlayer;
 
@@ -27,15 +35,17 @@ public class JZMediaSystem extends JZMediaInterface implements MediaPlayer.OnPre
             mediaPlayer = new MediaPlayer();
             mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
             mediaPlayer.setLooping(jzDataSource.looping);
-            mediaPlayer.setOnPreparedListener(JZMediaSystem.this);
-            mediaPlayer.setOnCompletionListener(JZMediaSystem.this);
-            mediaPlayer.setOnBufferingUpdateListener(JZMediaSystem.this);
+            mediaPlayer.setOnPreparedListener(JZCustomMediaSystem.this);
+            mediaPlayer.setOnCompletionListener(JZCustomMediaSystem.this);
+            mediaPlayer.setOnBufferingUpdateListener(JZCustomMediaSystem.this);
             mediaPlayer.setScreenOnWhilePlaying(true);
-            mediaPlayer.setOnSeekCompleteListener(JZMediaSystem.this);
-            mediaPlayer.setOnErrorListener(JZMediaSystem.this);
-            mediaPlayer.setOnInfoListener(JZMediaSystem.this);
-            mediaPlayer.setOnVideoSizeChangedListener(JZMediaSystem.this);
-            if (jzDataSource.getCurrentUrl() instanceof FileDescriptor) {
+            mediaPlayer.setOnSeekCompleteListener(JZCustomMediaSystem.this);
+            mediaPlayer.setOnErrorListener(JZCustomMediaSystem.this);
+            mediaPlayer.setOnInfoListener(JZCustomMediaSystem.this);
+            mediaPlayer.setOnVideoSizeChangedListener(JZCustomMediaSystem.this);
+            if (isContent(jzDataSource.getCurrentUrl().toString())) {
+                mediaPlayer.setDataSource(app, Uri.parse(jzDataSource.getCurrentUrl().toString()));
+            } else if (jzDataSource.getCurrentUrl() instanceof FileDescriptor) {
                 mediaPlayer.setDataSource((FileDescriptor) jzDataSource.getCurrentUrl());
             } else {
                 Class<MediaPlayer> clazz = MediaPlayer.class;
