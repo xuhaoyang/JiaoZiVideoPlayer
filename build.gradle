@@ -7,7 +7,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.android.tools.build:gradle:3.4.2'
         classpath 'com.novoda:bintray-release:0.9'
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -17,6 +17,12 @@ buildscript {
 
 allprojects {
     repositories {
+        maven {
+            url 'file:///Users/xuhaoyang/echat/repo/sdk'
+        }
+        maven {
+            url 'https://maven.echatsoft.com/echat/app/sdk'
+        }
         jcenter()
         google()
     }
