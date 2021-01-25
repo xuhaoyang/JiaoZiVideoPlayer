@@ -144,11 +144,11 @@ public abstract class JZVideoPlayer extends FrameLayout implements View.OnClickL
         }
     }
 
-    public static void startFullscreen(Context context, Class _class, String url, String title) {
-        startFullscreen(context, _class, new JZDataSource(url, title));
+    public static JZVideoPlayer startFullscreen(Context context, Class _class, String url, String title) {
+        return startFullscreen(context, _class, new JZDataSource(url, title));
     }
 
-    public static void startFullscreen(Context context, Class _class, JZDataSource jzDataSource) {
+    public static JZVideoPlayer startFullscreen(Context context, Class _class, JZDataSource jzDataSource) {
         hideSupportActionBar(context);
         JZUtils.setRequestedOrientation(context, FULLSCREEN_ORIENTATION);
         ViewGroup vp = (JZUtils.scanForActivity(context))//.getWindow().getDecorView();
@@ -169,11 +169,13 @@ public abstract class JZVideoPlayer extends FrameLayout implements View.OnClickL
             jzVideoPlayer.setUp(jzDataSource, JZVideoPlayerStandard.SCREEN_WINDOW_FULLSCREEN);
             CLICK_QUIT_FULLSCREEN_TIME = System.currentTimeMillis();
             jzVideoPlayer.startButton.performClick();
+            return jzVideoPlayer;
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     public static boolean backPress() {
