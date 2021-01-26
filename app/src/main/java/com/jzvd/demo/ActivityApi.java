@@ -61,11 +61,10 @@ public class ActivityApi extends AppCompatActivity implements View.OnClickListen
         mJzVideoPlayerStandard = findViewById(R.id.jz_video);
         LinkedHashMap map = new LinkedHashMap();
 
-        String proxyUrl = ApplicationDemo.getProxy(this).getProxyUrl(VideoConstant.videoUrls[0][9]);
-        LogUtils.i("proxyUrl: " + proxyUrl);
+        String proxyUrl = ApplicationDemo.getProxy(getBaseContext()).getProxyUrl("http://videos.jzvd.org/v/ldj/01-ldj.mp4");
         map.put("高清", proxyUrl);
-        map.put("标清", VideoConstant.videoUrls[0][6]);
-        map.put("普清", VideoConstant.videoUrlList[0]);
+        map.put("标清", "http://videos.jzvd.org/v/ldj/01-ldj.mp4");
+        map.put("普清", "http://videos.jzvd.org/v/ldj/04-ldj.mp4");
         JZDataSource jzDataSource = new JZDataSource(map, "饺子不信");
         jzDataSource.looping = true;
         jzDataSource.currentUrlIndex = 2;
